@@ -22,4 +22,24 @@ public class MorseEncodeTest {
         assertEquals("-", MorseEncode.encode('t'));
     }
 
+    @Test public void shouldReturnTheMorseCorrespondentToA() {
+        assertEquals(".-", MorseEncode.encode('A'));
+        assertEquals(".-", MorseEncode.encode('a'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToO() {
+        assertEquals("---", MorseEncode.encode('O'));
+        assertEquals("---", MorseEncode.encode('o'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToI() {
+        assertEquals("..", MorseEncode.encode('I'));
+        assertEquals("..", MorseEncode.encode('i'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToN() {
+        assertEquals("-.", MorseEncode.encode('N'));
+        assertEquals("-.", MorseEncode.encode('n'));
+    }
+
 }

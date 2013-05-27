@@ -13,8 +13,12 @@ public class MorseEncode {
     private static Map<String,String> encodeDictionary = new HashMap<String, String>();
 
     static{
+        encodeDictionary.put("A", ".-");
         encodeDictionary.put("E", ".");
+        encodeDictionary.put("I", "..");
+        encodeDictionary.put("O", "---");
         encodeDictionary.put("T", "-");
+        encodeDictionary.put("N", "-.");
     }
 
     /**
@@ -23,7 +27,6 @@ public class MorseEncode {
      * @return The correspondent morse.
      */
     public static String encode(char letter) {
-
         return encodeDictionary.get(String.valueOf(letter).toUpperCase());
     }
 }
