@@ -14,11 +14,31 @@ public class MorseEncode {
 
     static{
         encodeDictionary.put("A", ".-");
+        encodeDictionary.put("B", "-...");
+        encodeDictionary.put("C", "-.-.");
+        encodeDictionary.put("D", "-..");
         encodeDictionary.put("E", ".");
+        encodeDictionary.put("F", "..-.");
+        encodeDictionary.put("G", "--.");
+        encodeDictionary.put("H", "....");
         encodeDictionary.put("I", "..");
-        encodeDictionary.put("O", "---");
-        encodeDictionary.put("T", "-");
+        encodeDictionary.put("J", ".---");
+        encodeDictionary.put("K", "-.-");
+        encodeDictionary.put("L", ".-..");
+        encodeDictionary.put("M", "--");
         encodeDictionary.put("N", "-.");
+        encodeDictionary.put("O", "---");
+        encodeDictionary.put("P", ".--.");
+        encodeDictionary.put("Q", "--.-");
+        encodeDictionary.put("R", ".-.");
+        encodeDictionary.put("S", "...");
+        encodeDictionary.put("T", "-");
+        encodeDictionary.put("U", "..-");
+        encodeDictionary.put("V", "...-");
+        encodeDictionary.put("W", ".--");
+        encodeDictionary.put("X", "-..-");
+        encodeDictionary.put("Y", "-.--");
+        encodeDictionary.put("Z", "--..");
     }
 
     /**

@@ -42,4 +42,103 @@ public class MorseEncodeTest {
         assertEquals("-.", MorseEncode.encode('n'));
     }
 
+    @Test public void shouldReturnTheMorseCorrespondentToS() {
+        assertEquals("...", MorseEncode.encode('S'));
+        assertEquals("...", MorseEncode.encode('s'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToH() {
+        assertEquals("....", MorseEncode.encode('H'));
+        assertEquals("....", MorseEncode.encode('h'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToR() {
+        assertEquals(".-.", MorseEncode.encode('R'));
+        assertEquals(".-.", MorseEncode.encode('r'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToD() {
+        assertEquals("-..", MorseEncode.encode('D'));
+        assertEquals("-..", MorseEncode.encode('d'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToL() {
+        assertEquals(".-..", MorseEncode.encode('L'));
+        assertEquals(".-..", MorseEncode.encode('l'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToC() {
+        assertEquals("-.-.", MorseEncode.encode('C'));
+        assertEquals("-.-.", MorseEncode.encode('c'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToU() {
+        assertEquals("..-", MorseEncode.encode('U'));
+        assertEquals("..-", MorseEncode.encode('u'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToM() {
+        assertEquals("--", MorseEncode.encode('M'));
+        assertEquals("--", MorseEncode.encode('m'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToW() {
+        assertEquals(".--", MorseEncode.encode('W'));
+        assertEquals(".--", MorseEncode.encode('w'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToF() {
+        assertEquals("..-.", MorseEncode.encode('F'));
+        assertEquals("..-.", MorseEncode.encode('f'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToG() {
+        assertEquals("--.", MorseEncode.encode('G'));
+        assertEquals("--.", MorseEncode.encode('g'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToY() {
+        assertEquals("-.--", MorseEncode.encode('Y'));
+        assertEquals("-.--", MorseEncode.encode('y'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToP() {
+        assertEquals(".--.", MorseEncode.encode('P'));
+        assertEquals(".--.", MorseEncode.encode('p'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToB() {
+        assertEquals("-...", MorseEncode.encode('B'));
+        assertEquals("-...", MorseEncode.encode('b'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToV() {
+        assertEquals("...-", MorseEncode.encode('V'));
+        assertEquals("...-", MorseEncode.encode('v'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToK() {
+        assertEquals("-.-", MorseEncode.encode('K'));
+        assertEquals("-.-", MorseEncode.encode('k'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToJ() {
+        assertEquals(".---", MorseEncode.encode('J'));
+        assertEquals(".---", MorseEncode.encode('j'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToX() {
+        assertEquals("-..-", MorseEncode.encode('X'));
+        assertEquals("-..-", MorseEncode.encode('x'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToQ() {
+        assertEquals("--.-", MorseEncode.encode('Q'));
+        assertEquals("--.-", MorseEncode.encode('q'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToZ() {
+        assertEquals("--..", MorseEncode.encode('Z'));
+        assertEquals("--..", MorseEncode.encode('z'));
+    }
 }
