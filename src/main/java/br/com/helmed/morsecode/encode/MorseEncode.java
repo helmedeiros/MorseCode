@@ -10,6 +10,12 @@ import java.util.Map;
  * Time: 9:46 PM
  */
 public class MorseEncode {
+    private static Map<String,String> encodeDictionary = new HashMap<String, String>();
+
+    static{
+        encodeDictionary.put("E", ".");
+        encodeDictionary.put("T", "-");
+    }
 
     /**
      * Encode the given {@link String} to the correspondent morse {@link String}.
@@ -17,13 +23,7 @@ public class MorseEncode {
      * @return The correspondent morse.
      */
     public static String encode(char letter) {
-        Map<String,String> morseDictionary = new HashMap<String, String>();
-        morseDictionary.put("E", ".");
-        morseDictionary.put("T", "-");
 
-        if(letter == 'e' || letter == 'E') return morseDictionary.get(String.valueOf(letter).toUpperCase());
-        if(letter == 't' || letter == 'T') return morseDictionary.get(String.valueOf(letter).toUpperCase());
-
-        return "";
+        return encodeDictionary.get(String.valueOf(letter).toUpperCase());
     }
 }
