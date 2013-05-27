@@ -1,4 +1,4 @@
-The Lincoln's Messenger
+The Lincoln's Messenger (KATA)
 =================
 
 Studying wormholes, scientist of the RBS Group, found a way to cross small parts of our history by small portals that link to a certain time and place of our globe.
