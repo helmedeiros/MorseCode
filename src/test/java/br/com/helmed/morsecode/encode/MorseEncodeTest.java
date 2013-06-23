@@ -166,7 +166,11 @@ public class MorseEncodeTest {
         assertEquals("-.-.--", MorseEncode.encode('!'));
     }
 
-    @Test public void shouldReturnTheMorseCorrespondentToQuestionSlash() {
+    @Test public void shouldReturnTheMorseCorrespondentToSlash() {
         assertEquals("-..-.", MorseEncode.encode('/'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToParenthesisOpen() {
+        assertEquals("-.--.", MorseEncode.encode('('));
     }
 }
