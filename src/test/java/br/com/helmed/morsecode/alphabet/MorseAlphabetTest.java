@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
  * Time: 12:54 PM
  */
 public class MorseAlphabetTest {
-    private MorseAlphabet morseAlphabet = new MorseAlphabet();
+    private Alphabet morseAlphabet = new MorseAlphabet();
     
     @Test public void shouldReturnTheMorseCorrespondentToE() {
         assertEquals(".", morseAlphabet.fromLetter("E"));

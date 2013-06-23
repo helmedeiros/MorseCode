@@ -1,6 +1,6 @@
 package br.com.helmed.morsecode.encode;
 
-import br.com.helmed.morsecode.alphabet.MorseAlphabet;
+import br.com.helmed.morsecode.alphabet.Alphabet;
 
 /**
  * Utility class to encode morse.
@@ -11,14 +11,18 @@ import br.com.helmed.morsecode.alphabet.MorseAlphabet;
 public class MorseEncode {
     public static final boolean WITH_SPACE = true;
     public static final boolean WITHOUT_SPACE = false;
-    private static MorseAlphabet morseAlphabet = new MorseAlphabet();
+    private Alphabet morseAlphabet;
+
+    public MorseEncode(final Alphabet morseAlphabet) {
+        this.morseAlphabet = morseAlphabet;
+    }
 
     /**
      * Encode the given {@link char} to the correspondent morse {@link String}.
      * @param letter - The {@link char} alpha numeric information.
      * @return The correspondent morse.
      */
-    public static String encode(final char letter) {
+    private String encode(final char letter) {
         return morseAlphabet.fromLetter(String.valueOf(letter).toUpperCase());
     }
 
@@ -27,7 +31,7 @@ public class MorseEncode {
      * @param text - The {@link String} alpha numeric information.
      * @return The correspondent morse.
      */
-    public static String encode(final String text,  final Boolean withSpace) {
+    private String encode(final String text,  final Boolean withSpace) {
         StringBuilder encodedText = new StringBuilder("");
 
         final String cleanedText = text.replace("\n", "").replace("\t", "");
@@ -48,7 +52,7 @@ public class MorseEncode {
      * @param text - The {@link String} alpha numeric information.
      * @return The correspondent morse.
      */
-    public static String encodeWithSpace(final String text) {
+    public String encodeWithSpace(final String text) {
         return encode(text, WITH_SPACE);
     }
 
@@ -57,7 +61,7 @@ public class MorseEncode {
      * @param text - The {@link String} alpha numeric information.
      * @return The correspondent morse.
      */
-    public static String encodeWithoutSpace(final String text) {
+    public String encodeWithoutSpace(final String text) {
         return encode(text, WITHOUT_SPACE);
     }
 }
