@@ -197,4 +197,8 @@ public class MorseEncodeTest {
     @Test public void shouldReturnTheMorseCorrespondentToSemiColon() {
         assertEquals("-.-.-.", MorseEncode.encode(';'));
     }
+
+    @Test public void shouldReturnTheMorseCorrespondentToEqual() {
+        assertEquals("-...-", MorseEncode.encode('='));
+    }
 }
