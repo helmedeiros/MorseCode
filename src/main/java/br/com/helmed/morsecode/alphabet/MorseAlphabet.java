@@ -3,68 +3,93 @@ package br.com.helmed.morsecode.alphabet;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Represents the Morse Alphabet.
+ * User: helmed
+ * Date: 6/23/13
+ * Time: 12:53 PM
+ */
 public class MorseAlphabet {
-    public Map<String, String> morseAlphabetMap = new HashMap<String, String>();
+    private Map<String, String> morseAlphabetMap = new HashMap<String, String>();
+
+    private Map<String, String> morseLettersMap = new HashMap<String, String>();
+    private Map<String, String> morseCharactersMap = new HashMap<String, String>();
+    private Map<String, String> morseNumbersMap = new HashMap<String, String>();
 
     public MorseAlphabet(){
-        this.morseAlphabetMap.put("A", ".-");
-        this.morseAlphabetMap.put("B", "-...");
-        this.morseAlphabetMap.put("C", "-.-.");
-        this.morseAlphabetMap.put("D", "-..");
-        this.morseAlphabetMap.put("E", ".");
-        this.morseAlphabetMap.put("F", "..-.");
-        this.morseAlphabetMap.put("G", "--.");
-        this.morseAlphabetMap.put("H", "....");
-        this.morseAlphabetMap.put("I", "..");
-        this.morseAlphabetMap.put("J", ".---");
-        this.morseAlphabetMap.put("K", "-.-");
-        this.morseAlphabetMap.put("L", ".-..");
-        this.morseAlphabetMap.put("M", "--");
-        this.morseAlphabetMap.put("N", "-.");
-        this.morseAlphabetMap.put("O", "---");
-        this.morseAlphabetMap.put("P", ".--.");
-        this.morseAlphabetMap.put("Q", "--.-");
-        this.morseAlphabetMap.put("R", ".-.");
-        this.morseAlphabetMap.put("S", "...");
-        this.morseAlphabetMap.put("T", "-");
-        this.morseAlphabetMap.put("U", "..-");
-        this.morseAlphabetMap.put("V", "...-");
-        this.morseAlphabetMap.put("W", ".--");
-        this.morseAlphabetMap.put("X", "-..-");
-        this.morseAlphabetMap.put("Y", "-.--");
-        this.morseAlphabetMap.put("Z", "--..");
+        defineMorseLettersMap();
+        this.morseAlphabetMap.putAll(morseLettersMap);
 
-        this.morseAlphabetMap.put(" ", "");
-        this.morseAlphabetMap.put(".", ".-.-.-");
-        this.morseAlphabetMap.put(",", "--..--");
-        this.morseAlphabetMap.put("?", "..--..");
-        this.morseAlphabetMap.put("'", ".----.");
-        this.morseAlphabetMap.put("!", "-.-.--");
-        this.morseAlphabetMap.put("/", "-..-.");
-        this.morseAlphabetMap.put("(", "-.--.");
-        this.morseAlphabetMap.put(")", "-.--.-");
-        this.morseAlphabetMap.put("[", "-.--.");
-        this.morseAlphabetMap.put("]", "-.--.-");
-        this.morseAlphabetMap.put("&", ".-...");
-        this.morseAlphabetMap.put(":", "---...");
-        this.morseAlphabetMap.put(";", "-.-.-.");
-        this.morseAlphabetMap.put("=", "-...-");
-        this.morseAlphabetMap.put("-", "-....-");
-        this.morseAlphabetMap.put("_", "..--.-");
-        this.morseAlphabetMap.put("\"", ".-..-.");
-        this.morseAlphabetMap.put("$", "...-..-");
-        this.morseAlphabetMap.put("@", ".--.-.");
+        defineMorseCharactersMap();
+        this.morseAlphabetMap.putAll(morseCharactersMap);
 
-        this.morseAlphabetMap.put("0", "-----");
-        this.morseAlphabetMap.put("1", ".----");
-        this.morseAlphabetMap.put("2", "..---");
-        this.morseAlphabetMap.put("3", "...--");
-        this.morseAlphabetMap.put("4", "....-");
-        this.morseAlphabetMap.put("5", ".....");
-        this.morseAlphabetMap.put("6", "-....");
-        this.morseAlphabetMap.put("7", "--...");
-        this.morseAlphabetMap.put("8", "---..");
-        this.morseAlphabetMap.put("9", "----.");
+        defineMorseNumbersMap();
+        this.morseAlphabetMap.putAll(morseNumbersMap);
+    }
+
+    private void defineMorseNumbersMap() {
+        this.morseNumbersMap.put("0", "-----");
+        this.morseNumbersMap.put("1", ".----");
+        this.morseNumbersMap.put("2", "..---");
+        this.morseNumbersMap.put("3", "...--");
+        this.morseNumbersMap.put("4", "....-");
+        this.morseNumbersMap.put("5", ".....");
+        this.morseNumbersMap.put("6", "-....");
+        this.morseNumbersMap.put("7", "--...");
+        this.morseNumbersMap.put("8", "---..");
+        this.morseNumbersMap.put("9", "----.");
+    }
+
+    private void defineMorseCharactersMap() {
+        this.morseCharactersMap.put(" ", "");
+        this.morseCharactersMap.put(".", ".-.-.-");
+        this.morseCharactersMap.put(",", "--..--");
+        this.morseCharactersMap.put("?", "..--..");
+        this.morseCharactersMap.put("'", ".----.");
+        this.morseCharactersMap.put("!", "-.-.--");
+        this.morseCharactersMap.put("/", "-..-.");
+        this.morseCharactersMap.put("(", "-.--.");
+        this.morseCharactersMap.put(")", "-.--.-");
+        this.morseCharactersMap.put("[", "-.--.");
+        this.morseCharactersMap.put("]", "-.--.-");
+        this.morseCharactersMap.put("&", ".-...");
+        this.morseCharactersMap.put(":", "---...");
+        this.morseCharactersMap.put(";", "-.-.-.");
+        this.morseCharactersMap.put("=", "-...-");
+        this.morseCharactersMap.put("-", "-....-");
+        this.morseCharactersMap.put("_", "..--.-");
+        this.morseCharactersMap.put("\"", ".-..-.");
+        this.morseCharactersMap.put("$", "...-..-");
+        this.morseCharactersMap.put("@", ".--.-.");
+    }
+
+    private void defineMorseLettersMap() {
+        this.morseLettersMap.put("A", ".-");
+        this.morseLettersMap.put("B", "-...");
+        this.morseLettersMap.put("C", "-.-.");
+        this.morseLettersMap.put("D", "-..");
+        this.morseLettersMap.put("E", ".");
+        this.morseLettersMap.put("F", "..-.");
+        this.morseLettersMap.put("G", "--.");
+        this.morseLettersMap.put("H", "....");
+        this.morseLettersMap.put("I", "..");
+        this.morseLettersMap.put("J", ".---");
+        this.morseLettersMap.put("K", "-.-");
+        this.morseLettersMap.put("L", ".-..");
+        this.morseLettersMap.put("M", "--");
+        this.morseLettersMap.put("N", "-.");
+        this.morseLettersMap.put("O", "---");
+        this.morseLettersMap.put("P", ".--.");
+        this.morseLettersMap.put("Q", "--.-");
+        this.morseLettersMap.put("R", ".-.");
+        this.morseLettersMap.put("S", "...");
+        this.morseLettersMap.put("T", "-");
+        this.morseLettersMap.put("U", "..-");
+        this.morseLettersMap.put("V", "...-");
+        this.morseLettersMap.put("W", ".--");
+        this.morseLettersMap.put("X", "-..-");
+        this.morseLettersMap.put("Y", "-.--");
+        this.morseLettersMap.put("Z", "--..");
     }
 
     /**
