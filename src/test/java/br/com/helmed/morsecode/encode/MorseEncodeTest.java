@@ -141,4 +141,9 @@ public class MorseEncodeTest {
         assertEquals("--..", MorseEncode.encode('Z'));
         assertEquals("--..", MorseEncode.encode('z'));
     }
+
+    @Test public void shouldReturnTheMorseCorrespondentToSpace() {
+        assertEquals("", MorseEncode.encode(' '));
+    }
+
 }
