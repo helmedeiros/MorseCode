@@ -62,6 +62,7 @@ public class MorseEncode {
         encodeDictionary.put("@", ".--.-.");
 
         encodeDictionary.put("0", "-----");
+        encodeDictionary.put("1", ".----");
     }
 
     /**

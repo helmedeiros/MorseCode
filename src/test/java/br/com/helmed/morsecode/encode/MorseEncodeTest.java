@@ -225,4 +225,8 @@ public class MorseEncodeTest {
     @Test public void shouldReturnTheMorseCorrespondentTo0() {
         assertEquals("-----", MorseEncode.encode('0'));
     }
+
+    @Test public void shouldReturnTheMorseCorrespondentTo1() {
+        assertEquals(".----", MorseEncode.encode('1'));
+    }
 }
