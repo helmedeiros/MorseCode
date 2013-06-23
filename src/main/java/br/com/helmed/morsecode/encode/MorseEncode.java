@@ -67,6 +67,10 @@ public class MorseEncode {
         encodeDictionary.put("3", "...--");
         encodeDictionary.put("4", "....-");
         encodeDictionary.put("5", ".....");
+        encodeDictionary.put("6", "-....");
+        encodeDictionary.put("7", "--...");
+        encodeDictionary.put("8", "---..");
+        encodeDictionary.put("9", "----.");
     }
 
     /**

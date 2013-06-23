@@ -245,4 +245,20 @@ public class MorseEncodeTest {
     @Test public void shouldReturnTheMorseCorrespondentTo5() {
         assertEquals(".....", MorseEncode.encode('5'));
     }
+
+    @Test public void shouldReturnTheMorseCorrespondentTo6() {
+        assertEquals("-....", MorseEncode.encode('6'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentTo7() {
+        assertEquals("--...", MorseEncode.encode('7'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentTo8() {
+        assertEquals("---..", MorseEncode.encode('8'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentTo9() {
+        assertEquals("----.", MorseEncode.encode('9'));
+    }
 }
