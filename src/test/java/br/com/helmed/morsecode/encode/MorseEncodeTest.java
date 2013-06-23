@@ -209,4 +209,8 @@ public class MorseEncodeTest {
     @Test public void shouldReturnTheMorseCorrespondentToUnderLine() {
         assertEquals("..--.-", MorseEncode.encode('_'));
     }
+
+    @Test public void shouldReturnTheMorseCorrespondentToQuote() {
+        assertEquals(".-..-.", MorseEncode.encode('"'));
+    }
 }
