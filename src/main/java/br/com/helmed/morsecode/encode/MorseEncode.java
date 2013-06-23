@@ -1,7 +1,6 @@
 package br.com.helmed.morsecode.encode;
 
-import java.util.HashMap;
-import java.util.Map;
+import br.com.helmed.morsecode.alphabet.MorseAlphabet;
 
 /**
  * Utility class to encode morse.
@@ -12,68 +11,7 @@ import java.util.Map;
 public class MorseEncode {
     public static final boolean WITH_SPACE = true;
     public static final boolean WITHOUT_SPACE = false;
-    private static Map<String,String> encodeDictionary = new HashMap<String, String>();
-
-    static{
-        encodeDictionary.put("A", ".-");
-        encodeDictionary.put("B", "-...");
-        encodeDictionary.put("C", "-.-.");
-        encodeDictionary.put("D", "-..");
-        encodeDictionary.put("E", ".");
-        encodeDictionary.put("F", "..-.");
-        encodeDictionary.put("G", "--.");
-        encodeDictionary.put("H", "....");
-        encodeDictionary.put("I", "..");
-        encodeDictionary.put("J", ".---");
-        encodeDictionary.put("K", "-.-");
-        encodeDictionary.put("L", ".-..");
-        encodeDictionary.put("M", "--");
-        encodeDictionary.put("N", "-.");
-        encodeDictionary.put("O", "---");
-        encodeDictionary.put("P", ".--.");
-        encodeDictionary.put("Q", "--.-");
-        encodeDictionary.put("R", ".-.");
-        encodeDictionary.put("S", "...");
-        encodeDictionary.put("T", "-");
-        encodeDictionary.put("U", "..-");
-        encodeDictionary.put("V", "...-");
-        encodeDictionary.put("W", ".--");
-        encodeDictionary.put("X", "-..-");
-        encodeDictionary.put("Y", "-.--");
-        encodeDictionary.put("Z", "--..");
-
-        encodeDictionary.put(" ", "");
-        encodeDictionary.put(".", ".-.-.-");
-        encodeDictionary.put(",", "--..--");
-        encodeDictionary.put("?", "..--..");
-        encodeDictionary.put("'", ".----.");
-        encodeDictionary.put("!", "-.-.--");
-        encodeDictionary.put("/", "-..-.");
-        encodeDictionary.put("(", "-.--.");
-        encodeDictionary.put(")", "-.--.-");
-        encodeDictionary.put("[", "-.--.");
-        encodeDictionary.put("]", "-.--.-");
-        encodeDictionary.put("&", ".-...");
-        encodeDictionary.put(":", "---...");
-        encodeDictionary.put(";", "-.-.-.");
-        encodeDictionary.put("=", "-...-");
-        encodeDictionary.put("-", "-....-");
-        encodeDictionary.put("_", "..--.-");
-        encodeDictionary.put("\"", ".-..-.");
-        encodeDictionary.put("$", "...-..-");
-        encodeDictionary.put("@", ".--.-.");
-
-        encodeDictionary.put("0", "-----");
-        encodeDictionary.put("1", ".----");
-        encodeDictionary.put("2", "..---");
-        encodeDictionary.put("3", "...--");
-        encodeDictionary.put("4", "....-");
-        encodeDictionary.put("5", ".....");
-        encodeDictionary.put("6", "-....");
-        encodeDictionary.put("7", "--...");
-        encodeDictionary.put("8", "---..");
-        encodeDictionary.put("9", "----.");
-    }
+    private static MorseAlphabet morseAlphabet = new MorseAlphabet();
 
     /**
      * Encode the given {@link char} to the correspondent morse {@link String}.
@@ -81,7 +19,7 @@ public class MorseEncode {
      * @return The correspondent morse.
      */
     public static String encode(final char letter) {
-        return encodeDictionary.get(String.valueOf(letter).toUpperCase());
+        return morseAlphabet.get(String.valueOf(letter).toUpperCase());
     }
 
     /**
