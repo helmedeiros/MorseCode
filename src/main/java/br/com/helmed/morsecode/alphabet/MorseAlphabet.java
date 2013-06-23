@@ -4,67 +4,67 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MorseAlphabet {
-    public Map<String, String> encodeDictionary = new HashMap<String, String>();
+    public Map<String, String> morseAlphabetMap = new HashMap<String, String>();
 
     public MorseAlphabet(){
-        this.encodeDictionary.put("A", ".-");
-        this.encodeDictionary.put("B", "-...");
-        this.encodeDictionary.put("C", "-.-.");
-        this.encodeDictionary.put("D", "-..");
-        this.encodeDictionary.put("E", ".");
-        this.encodeDictionary.put("F", "..-.");
-        this.encodeDictionary.put("G", "--.");
-        this.encodeDictionary.put("H", "....");
-        this.encodeDictionary.put("I", "..");
-        this.encodeDictionary.put("J", ".---");
-        this.encodeDictionary.put("K", "-.-");
-        this.encodeDictionary.put("L", ".-..");
-        this.encodeDictionary.put("M", "--");
-        this.encodeDictionary.put("N", "-.");
-        this.encodeDictionary.put("O", "---");
-        this.encodeDictionary.put("P", ".--.");
-        this.encodeDictionary.put("Q", "--.-");
-        this.encodeDictionary.put("R", ".-.");
-        this.encodeDictionary.put("S", "...");
-        this.encodeDictionary.put("T", "-");
-        this.encodeDictionary.put("U", "..-");
-        this.encodeDictionary.put("V", "...-");
-        this.encodeDictionary.put("W", ".--");
-        this.encodeDictionary.put("X", "-..-");
-        this.encodeDictionary.put("Y", "-.--");
-        this.encodeDictionary.put("Z", "--..");
+        this.morseAlphabetMap.put("A", ".-");
+        this.morseAlphabetMap.put("B", "-...");
+        this.morseAlphabetMap.put("C", "-.-.");
+        this.morseAlphabetMap.put("D", "-..");
+        this.morseAlphabetMap.put("E", ".");
+        this.morseAlphabetMap.put("F", "..-.");
+        this.morseAlphabetMap.put("G", "--.");
+        this.morseAlphabetMap.put("H", "....");
+        this.morseAlphabetMap.put("I", "..");
+        this.morseAlphabetMap.put("J", ".---");
+        this.morseAlphabetMap.put("K", "-.-");
+        this.morseAlphabetMap.put("L", ".-..");
+        this.morseAlphabetMap.put("M", "--");
+        this.morseAlphabetMap.put("N", "-.");
+        this.morseAlphabetMap.put("O", "---");
+        this.morseAlphabetMap.put("P", ".--.");
+        this.morseAlphabetMap.put("Q", "--.-");
+        this.morseAlphabetMap.put("R", ".-.");
+        this.morseAlphabetMap.put("S", "...");
+        this.morseAlphabetMap.put("T", "-");
+        this.morseAlphabetMap.put("U", "..-");
+        this.morseAlphabetMap.put("V", "...-");
+        this.morseAlphabetMap.put("W", ".--");
+        this.morseAlphabetMap.put("X", "-..-");
+        this.morseAlphabetMap.put("Y", "-.--");
+        this.morseAlphabetMap.put("Z", "--..");
 
-        this.encodeDictionary.put(" ", "");
-        this.encodeDictionary.put(".", ".-.-.-");
-        this.encodeDictionary.put(",", "--..--");
-        this.encodeDictionary.put("?", "..--..");
-        this.encodeDictionary.put("'", ".----.");
-        this.encodeDictionary.put("!", "-.-.--");
-        this.encodeDictionary.put("/", "-..-.");
-        this.encodeDictionary.put("(", "-.--.");
-        this.encodeDictionary.put(")", "-.--.-");
-        this.encodeDictionary.put("[", "-.--.");
-        this.encodeDictionary.put("]", "-.--.-");
-        this.encodeDictionary.put("&", ".-...");
-        this.encodeDictionary.put(":", "---...");
-        this.encodeDictionary.put(";", "-.-.-.");
-        this.encodeDictionary.put("=", "-...-");
-        this.encodeDictionary.put("-", "-....-");
-        this.encodeDictionary.put("_", "..--.-");
-        this.encodeDictionary.put("\"", ".-..-.");
-        this.encodeDictionary.put("$", "...-..-");
-        this.encodeDictionary.put("@", ".--.-.");
+        this.morseAlphabetMap.put(" ", "");
+        this.morseAlphabetMap.put(".", ".-.-.-");
+        this.morseAlphabetMap.put(",", "--..--");
+        this.morseAlphabetMap.put("?", "..--..");
+        this.morseAlphabetMap.put("'", ".----.");
+        this.morseAlphabetMap.put("!", "-.-.--");
+        this.morseAlphabetMap.put("/", "-..-.");
+        this.morseAlphabetMap.put("(", "-.--.");
+        this.morseAlphabetMap.put(")", "-.--.-");
+        this.morseAlphabetMap.put("[", "-.--.");
+        this.morseAlphabetMap.put("]", "-.--.-");
+        this.morseAlphabetMap.put("&", ".-...");
+        this.morseAlphabetMap.put(":", "---...");
+        this.morseAlphabetMap.put(";", "-.-.-.");
+        this.morseAlphabetMap.put("=", "-...-");
+        this.morseAlphabetMap.put("-", "-....-");
+        this.morseAlphabetMap.put("_", "..--.-");
+        this.morseAlphabetMap.put("\"", ".-..-.");
+        this.morseAlphabetMap.put("$", "...-..-");
+        this.morseAlphabetMap.put("@", ".--.-.");
 
-        this.encodeDictionary.put("0", "-----");
-        this.encodeDictionary.put("1", ".----");
-        this.encodeDictionary.put("2", "..---");
-        this.encodeDictionary.put("3", "...--");
-        this.encodeDictionary.put("4", "....-");
-        this.encodeDictionary.put("5", ".....");
-        this.encodeDictionary.put("6", "-....");
-        this.encodeDictionary.put("7", "--...");
-        this.encodeDictionary.put("8", "---..");
-        this.encodeDictionary.put("9", "----.");
+        this.morseAlphabetMap.put("0", "-----");
+        this.morseAlphabetMap.put("1", ".----");
+        this.morseAlphabetMap.put("2", "..---");
+        this.morseAlphabetMap.put("3", "...--");
+        this.morseAlphabetMap.put("4", "....-");
+        this.morseAlphabetMap.put("5", ".....");
+        this.morseAlphabetMap.put("6", "-....");
+        this.morseAlphabetMap.put("7", "--...");
+        this.morseAlphabetMap.put("8", "---..");
+        this.morseAlphabetMap.put("9", "----.");
     }
 
     /**
@@ -72,7 +72,7 @@ public class MorseAlphabet {
      * @param letter - The {@link String} letter from who is needed the correspondent morse.
      * @return the correspondent {@link String} of the given letter.
      */
-    public String get(String letter) {
-        return encodeDictionary.get(letter);
+    public String fromLetter(String letter) {
+        return morseAlphabetMap.get(letter);
     }
 }

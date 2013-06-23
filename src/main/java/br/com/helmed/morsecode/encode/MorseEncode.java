@@ -19,7 +19,7 @@ public class MorseEncode {
      * @return The correspondent morse.
      */
     public static String encode(final char letter) {
-        return morseAlphabet.get(String.valueOf(letter).toUpperCase());
+        return morseAlphabet.fromLetter(String.valueOf(letter).toUpperCase());
     }
 
     /**
