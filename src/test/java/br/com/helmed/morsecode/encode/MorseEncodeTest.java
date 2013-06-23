@@ -273,5 +273,14 @@ public class MorseEncodeTest {
     @Test public void shouldReturnTheTextCorrespondentWithDoubleSpaceBetweenWords() throws Exception {
         assertEquals(". -- .- -. -.-. .. .--. .- - .. --- -.  .--. .-. --- -.-. .-.. .- -- .- - .. --- -.",
                 MorseEncode.encodeWithSpace("Emancipation Proclamation"));
+
+        assertEquals("-... -.--  - .... .  .--. .-. . ... .. -.. . -. -  --- ..-.  ..- -. .. - . -..  ... - .- - . ...  --- ..-.  .- -- . .-. .. -.-. .-",
+                MorseEncode.encodeWithSpace("By the president of united states of america"));
+    }
+
+    @Test public void shouldReturnTheTextCorrespondentWithDoubleSpaceBetweenWordsWithSpecialCharacters() throws Exception {
+        assertEquals(".-- .... . .-. . .- ... --..--  --- -.  - .... .  - .-- . -. - -.-- -...- ... . -.-. --- -. -..  -.. .- -.--  --- ..-.  ... . .--. - . -- -... . .-. --..--  .. -.  - .... .  -.-- . .- .-.  --- ..-.  --- ..- .-.  .-.. --- .-. -..",
+                MorseEncode.encodeWithSpace("Whereas, On the Twenty=Second day of September, in the year of our Lord"));
+
     }
 }
