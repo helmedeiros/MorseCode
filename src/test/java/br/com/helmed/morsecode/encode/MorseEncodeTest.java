@@ -269,4 +269,9 @@ public class MorseEncodeTest {
         assertEquals(". -- .- -. -.-. .. .--. .- - .. --- -.",
                 MorseEncode.encodeWithSpace("Emancipation"));
     }
+
+    @Test public void shouldReturnTheTextCorrespondentWithDoubleSpaceBetweenWords() throws Exception {
+        assertEquals(". -- .- -. -.-. .. .--. .- - .. --- -.  .--. .-. --- -.-. .-.. .- -- .- - .. --- -.",
+                MorseEncode.encodeWithSpace("Emancipation Proclamation"));
+    }
 }
