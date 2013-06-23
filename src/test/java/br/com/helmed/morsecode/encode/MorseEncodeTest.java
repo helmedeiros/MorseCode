@@ -146,4 +146,8 @@ public class MorseEncodeTest {
         assertEquals("", MorseEncode.encode(' '));
     }
 
+    @Test public void shouldReturnTheMorseCorrespondentToDot() {
+        assertEquals(".-.-.-", MorseEncode.encode('.'));
+    }
+
 }
