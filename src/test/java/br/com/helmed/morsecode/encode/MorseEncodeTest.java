@@ -165,4 +165,8 @@ public class MorseEncodeTest {
     @Test public void shouldReturnTheMorseCorrespondentToExclamationMArk() {
         assertEquals("-.-.--", MorseEncode.encode('!'));
     }
+
+    @Test public void shouldReturnTheMorseCorrespondentToQuestionSlash() {
+        assertEquals("-..-.", MorseEncode.encode('/'));
+    }
 }
