@@ -157,4 +157,8 @@ public class MorseEncodeTest {
     @Test public void shouldReturnTheMorseCorrespondentToQuestionMArk() {
         assertEquals("..--..", MorseEncode.encode('?'));
     }
+
+    @Test public void shouldReturnTheMorseCorrespondentToApostrophe() {
+        assertEquals(".----.", MorseEncode.encode('\''));
+    }
 }
