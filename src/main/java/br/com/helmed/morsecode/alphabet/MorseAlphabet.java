@@ -98,6 +98,6 @@ public class MorseAlphabet {
      * @return the correspondent {@link String} of the given letter.
      */
     public String fromLetter(String letter) {
-        return morseAlphabetMap.get(letter);
+        return morseAlphabetMap.get(letter.toUpperCase());
     }
 }
