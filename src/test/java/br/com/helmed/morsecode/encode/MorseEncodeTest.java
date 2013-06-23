@@ -181,4 +181,8 @@ public class MorseEncodeTest {
     @Test public void shouldReturnTheMorseCorrespondentToBraketOpen() {
         assertEquals("-.--.", MorseEncode.encode('['));
     }
+
+    @Test public void shouldReturnTheMorseCorrespondentToBraketClose() {
+        assertEquals("-.--.-", MorseEncode.encode(']'));
+    }
 }
