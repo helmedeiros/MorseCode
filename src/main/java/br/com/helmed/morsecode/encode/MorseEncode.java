@@ -39,6 +39,7 @@ public class MorseEncode {
         encodeDictionary.put("X", "-..-");
         encodeDictionary.put("Y", "-.--");
         encodeDictionary.put("Z", "--..");
+
         encodeDictionary.put(" ", "");
         encodeDictionary.put(".", ".-.-.-");
         encodeDictionary.put(",", "--..--");
@@ -59,6 +60,17 @@ public class MorseEncode {
         encodeDictionary.put("\"", ".-..-.");
         encodeDictionary.put("$", "...-..-");
         encodeDictionary.put("@", ".--.-.");
+
+        encodeDictionary.put("0", "-----");
+        encodeDictionary.put("1", ".----");
+        encodeDictionary.put("2", "..---");
+        encodeDictionary.put("3", "...--");
+        encodeDictionary.put("4", "....-");
+        encodeDictionary.put("5", ".....");
+        encodeDictionary.put("6", "-....");
+        encodeDictionary.put("7", "--...");
+        encodeDictionary.put("8", "---..");
+        encodeDictionary.put("9", "----.");
     }
 
     /**

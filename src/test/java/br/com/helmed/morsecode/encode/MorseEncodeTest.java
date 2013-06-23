@@ -221,4 +221,44 @@ public class MorseEncodeTest {
     @Test public void shouldReturnTheMorseCorrespondentToAtSign() {
         assertEquals(".--.-.", MorseEncode.encode('@'));
     }
+
+    @Test public void shouldReturnTheMorseCorrespondentTo0() {
+        assertEquals("-----", MorseEncode.encode('0'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentTo1() {
+        assertEquals(".----", MorseEncode.encode('1'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentTo2() {
+        assertEquals("..---", MorseEncode.encode('2'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentTo3() {
+        assertEquals("...--", MorseEncode.encode('3'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentTo4() {
+        assertEquals("....-", MorseEncode.encode('4'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentTo5() {
+        assertEquals(".....", MorseEncode.encode('5'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentTo6() {
+        assertEquals("-....", MorseEncode.encode('6'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentTo7() {
+        assertEquals("--...", MorseEncode.encode('7'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentTo8() {
+        assertEquals("---..", MorseEncode.encode('8'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentTo9() {
+        assertEquals("----.", MorseEncode.encode('9'));
+    }
 }
