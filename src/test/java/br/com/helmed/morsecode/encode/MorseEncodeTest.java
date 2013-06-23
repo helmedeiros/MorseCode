@@ -201,4 +201,8 @@ public class MorseEncodeTest {
     @Test public void shouldReturnTheMorseCorrespondentToEqual() {
         assertEquals("-...-", MorseEncode.encode('='));
     }
+
+    @Test public void shouldReturnTheMorseCorrespondentToHifen() {
+        assertEquals("-....-", MorseEncode.encode('-'));
+    }
 }
