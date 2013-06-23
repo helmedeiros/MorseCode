@@ -10,6 +10,8 @@ import java.util.Map;
  * Time: 9:46 PM
  */
 public class MorseEncode {
+    public static final boolean WITH_SPACE = true;
+    public static final boolean WITHOUT_SPACE = false;
     private static Map<String,String> encodeDictionary = new HashMap<String, String>();
 
     static{
@@ -74,7 +76,7 @@ public class MorseEncode {
     }
 
     /**
-     * Encode the given {@link String} to the correspondent morse {@link String}.
+     * Encode the given {@link char} to the correspondent morse {@link String}.
      * @param letter - The {@link char} alpha numeric information.
      * @return The correspondent morse.
      */
@@ -87,11 +89,17 @@ public class MorseEncode {
      * @param text - The {@link String} alpha numeric information.
      * @return The correspondent morse.
      */
-    public static String encodeWithSpace(final String text) {
+    public static String encode(final String text,  final Boolean withSpace) {
         StringBuilder encodedText = new StringBuilder("");
+
         final String cleanedText = text.replace("\n", "").replace("\t", "");
+
         for (char character : cleanedText.toCharArray()) {
-            encodedText.append(encode(character)).append(" ");
+            String encode = encode(character);
+            if(encode != null) encodedText.append(encode);
+            else System.out.println("Null -> "+character);
+
+            if(withSpace) encodedText.append(" ");
         }
 
         return encodedText.toString().trim();
@@ -102,17 +110,16 @@ public class MorseEncode {
      * @param text - The {@link String} alpha numeric information.
      * @return The correspondent morse.
      */
+    public static String encodeWithSpace(final String text) {
+        return encode(text, WITH_SPACE);
+    }
+
+    /**
+     * Encode the given {@link String} to the correspondent morse {@link String}.
+     * @param text - The {@link String} alpha numeric information.
+     * @return The correspondent morse.
+     */
     public static String encodeWithoutSpace(final String text) {
-        StringBuilder encodedText = new StringBuilder("");
-
-        final String cleanedText = text.replace("\n", "").replace("\t", "");
-
-        for (char character : cleanedText.toCharArray()) {
-            String encode = encode(character);
-            if(encode != null) encodedText.append(encode);
-            else System.out.println("Null -> "+character);
-        }
-
-        return encodedText.toString().trim();
+        return encode(text, WITHOUT_SPACE);
     }
 }
