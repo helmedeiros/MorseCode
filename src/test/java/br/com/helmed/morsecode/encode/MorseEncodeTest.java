@@ -150,4 +150,7 @@ public class MorseEncodeTest {
         assertEquals(".-.-.-", MorseEncode.encode('.'));
     }
 
+    @Test public void shouldReturnTheMorseCorrespondentToComa() {
+        assertEquals("--..--", MorseEncode.encode(','));
+    }
 }
