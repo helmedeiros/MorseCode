@@ -153,4 +153,8 @@ public class MorseEncodeTest {
     @Test public void shouldReturnTheMorseCorrespondentToComa() {
         assertEquals("--..--", MorseEncode.encode(','));
     }
+
+    @Test public void shouldReturnTheMorseCorrespondentToQuestionMArk() {
+        assertEquals("..--..", MorseEncode.encode('?'));
+    }
 }
