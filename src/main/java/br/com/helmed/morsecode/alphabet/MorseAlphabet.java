@@ -9,7 +9,7 @@ import java.util.Map;
  * Date: 6/23/13
  * Time: 12:53 PM
  */
-public class MorseAlphabet {
+public class MorseAlphabet implements Alphabet {
     private Map<String, String> morseAlphabetMap = new HashMap<String, String>();
 
     private Map<String, String> morseLettersMap = new HashMap<String, String>();
@@ -97,6 +97,7 @@ public class MorseAlphabet {
      * @param letter - The {@link String} letter from who is needed the correspondent morse.
      * @return the correspondent {@link String} of the given letter.
      */
+    @Override
     public String fromLetter(String letter) {
         return morseAlphabetMap.get(letter.toUpperCase());
     }

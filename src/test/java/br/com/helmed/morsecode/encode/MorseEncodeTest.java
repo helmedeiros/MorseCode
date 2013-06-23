@@ -1,8 +1,12 @@
 package br.com.helmed.morsecode.encode;
 
+import br.com.helmed.morsecode.alphabet.Alphabet;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 /**
  * Unit test of {@link MorseEncode}
@@ -11,283 +15,360 @@ import static org.junit.Assert.assertEquals;
  * Time: 9:44 PM
  */
 public class MorseEncodeTest {
+    private MorseEncode morseEncode;
+
+    @Before
+    public void setUp() throws Exception {
+        Alphabet alphabetMock = createMorseAlphabetMock();
+
+        morseEncode = new MorseEncode(alphabetMock);
+    }
 
     @Test public void shouldReturnTheMorseCorrespondentToE() {
-        assertEquals(".", MorseEncode.encode('E'));
-        assertEquals(".", MorseEncode.encode('e'));
+        assertEquals(".", morseEncode.encodeWithSpace("E"));
+        assertEquals(".", morseEncode.encodeWithSpace("e"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToT() {
-        assertEquals("-", MorseEncode.encode('T'));
-        assertEquals("-", MorseEncode.encode('t'));
+        assertEquals("-", morseEncode.encodeWithSpace("T"));
+        assertEquals("-", morseEncode.encodeWithSpace("t"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToA() {
-        assertEquals(".-", MorseEncode.encode('A'));
-        assertEquals(".-", MorseEncode.encode('a'));
+        assertEquals(".-", morseEncode.encodeWithSpace("A"));
+        assertEquals(".-", morseEncode.encodeWithSpace("a"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToO() {
-        assertEquals("---", MorseEncode.encode('O'));
-        assertEquals("---", MorseEncode.encode('o'));
+        assertEquals("---", morseEncode.encodeWithSpace("O"));
+        assertEquals("---", morseEncode.encodeWithSpace("o"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToI() {
-        assertEquals("..", MorseEncode.encode('I'));
-        assertEquals("..", MorseEncode.encode('i'));
+        assertEquals("..", morseEncode.encodeWithSpace("I"));
+        assertEquals("..", morseEncode.encodeWithSpace("i"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToN() {
-        assertEquals("-.", MorseEncode.encode('N'));
-        assertEquals("-.", MorseEncode.encode('n'));
+        assertEquals("-.", morseEncode.encodeWithSpace("N"));
+        assertEquals("-.", morseEncode.encodeWithSpace("n"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToS() {
-        assertEquals("...", MorseEncode.encode('S'));
-        assertEquals("...", MorseEncode.encode('s'));
+        assertEquals("...", morseEncode.encodeWithSpace("S"));
+        assertEquals("...", morseEncode.encodeWithSpace("s"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToH() {
-        assertEquals("....", MorseEncode.encode('H'));
-        assertEquals("....", MorseEncode.encode('h'));
+        assertEquals("....", morseEncode.encodeWithSpace("H"));
+        assertEquals("....", morseEncode.encodeWithSpace("h"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToR() {
-        assertEquals(".-.", MorseEncode.encode('R'));
-        assertEquals(".-.", MorseEncode.encode('r'));
+        assertEquals(".-.", morseEncode.encodeWithSpace("R"));
+        assertEquals(".-.", morseEncode.encodeWithSpace("r"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToD() {
-        assertEquals("-..", MorseEncode.encode('D'));
-        assertEquals("-..", MorseEncode.encode('d'));
+        assertEquals("-..", morseEncode.encodeWithSpace("D"));
+        assertEquals("-..", morseEncode.encodeWithSpace("d"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToL() {
-        assertEquals(".-..", MorseEncode.encode('L'));
-        assertEquals(".-..", MorseEncode.encode('l'));
+        assertEquals(".-..", morseEncode.encodeWithSpace("L"));
+        assertEquals(".-..", morseEncode.encodeWithSpace("l"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToC() {
-        assertEquals("-.-.", MorseEncode.encode('C'));
-        assertEquals("-.-.", MorseEncode.encode('c'));
+        assertEquals("-.-.", morseEncode.encodeWithSpace("C"));
+        assertEquals("-.-.", morseEncode.encodeWithSpace("c"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToU() {
-        assertEquals("..-", MorseEncode.encode('U'));
-        assertEquals("..-", MorseEncode.encode('u'));
+        assertEquals("..-", morseEncode.encodeWithSpace("U"));
+        assertEquals("..-", morseEncode.encodeWithSpace("u"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToM() {
-        assertEquals("--", MorseEncode.encode('M'));
-        assertEquals("--", MorseEncode.encode('m'));
+        assertEquals("--", morseEncode.encodeWithSpace("M"));
+        assertEquals("--", morseEncode.encodeWithSpace("m"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToW() {
-        assertEquals(".--", MorseEncode.encode('W'));
-        assertEquals(".--", MorseEncode.encode('w'));
+        assertEquals(".--", morseEncode.encodeWithSpace("W"));
+        assertEquals(".--", morseEncode.encodeWithSpace("w"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToF() {
-        assertEquals("..-.", MorseEncode.encode('F'));
-        assertEquals("..-.", MorseEncode.encode('f'));
+        assertEquals("..-.", morseEncode.encodeWithSpace("F"));
+        assertEquals("..-.", morseEncode.encodeWithSpace("f"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToG() {
-        assertEquals("--.", MorseEncode.encode('G'));
-        assertEquals("--.", MorseEncode.encode('g'));
+        assertEquals("--.", morseEncode.encodeWithSpace("G"));
+        assertEquals("--.", morseEncode.encodeWithSpace("g"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToY() {
-        assertEquals("-.--", MorseEncode.encode('Y'));
-        assertEquals("-.--", MorseEncode.encode('y'));
+        assertEquals("-.--", morseEncode.encodeWithSpace("Y"));
+        assertEquals("-.--", morseEncode.encodeWithSpace("y"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToP() {
-        assertEquals(".--.", MorseEncode.encode('P'));
-        assertEquals(".--.", MorseEncode.encode('p'));
+        assertEquals(".--.", morseEncode.encodeWithSpace("P"));
+        assertEquals(".--.", morseEncode.encodeWithSpace("p"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToB() {
-        assertEquals("-...", MorseEncode.encode('B'));
-        assertEquals("-...", MorseEncode.encode('b'));
+        assertEquals("-...", morseEncode.encodeWithSpace("B"));
+        assertEquals("-...", morseEncode.encodeWithSpace("b"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToV() {
-        assertEquals("...-", MorseEncode.encode('V'));
-        assertEquals("...-", MorseEncode.encode('v'));
+        assertEquals("...-", morseEncode.encodeWithSpace("V"));
+        assertEquals("...-", morseEncode.encodeWithSpace("v"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToK() {
-        assertEquals("-.-", MorseEncode.encode('K'));
-        assertEquals("-.-", MorseEncode.encode('k'));
+        assertEquals("-.-", morseEncode.encodeWithSpace("K"));
+        assertEquals("-.-", morseEncode.encodeWithSpace("k"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToJ() {
-        assertEquals(".---", MorseEncode.encode('J'));
-        assertEquals(".---", MorseEncode.encode('j'));
+        assertEquals(".---", morseEncode.encodeWithSpace("J"));
+        assertEquals(".---", morseEncode.encodeWithSpace("j"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToX() {
-        assertEquals("-..-", MorseEncode.encode('X'));
-        assertEquals("-..-", MorseEncode.encode('x'));
+        assertEquals("-..-", morseEncode.encodeWithSpace("X"));
+        assertEquals("-..-", morseEncode.encodeWithSpace("x"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToQ() {
-        assertEquals("--.-", MorseEncode.encode('Q'));
-        assertEquals("--.-", MorseEncode.encode('q'));
+        assertEquals("--.-", morseEncode.encodeWithSpace("Q"));
+        assertEquals("--.-", morseEncode.encodeWithSpace("q"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToZ() {
-        assertEquals("--..", MorseEncode.encode('Z'));
-        assertEquals("--..", MorseEncode.encode('z'));
+        assertEquals("--..", morseEncode.encodeWithSpace("Z"));
+        assertEquals("--..", morseEncode.encodeWithSpace("z"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToSpace() {
-        assertEquals("", MorseEncode.encode(' '));
+        assertEquals("", morseEncode.encodeWithSpace(" "));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToDot() {
-        assertEquals(".-.-.-", MorseEncode.encode('.'));
+        assertEquals(".-.-.-", morseEncode.encodeWithSpace("."));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToComa() {
-        assertEquals("--..--", MorseEncode.encode(','));
+        assertEquals("--..--", morseEncode.encodeWithSpace(","));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToQuestionMArk() {
-        assertEquals("..--..", MorseEncode.encode('?'));
+        assertEquals("..--..", morseEncode.encodeWithSpace("?"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToApostrophe() {
-        assertEquals(".----.", MorseEncode.encode('\''));
+        assertEquals(".----.", morseEncode.encodeWithSpace("\'"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToExclamationMArk() {
-        assertEquals("-.-.--", MorseEncode.encode('!'));
+        assertEquals("-.-.--", morseEncode.encodeWithSpace("!"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToSlash() {
-        assertEquals("-..-.", MorseEncode.encode('/'));
+        assertEquals("-..-.", morseEncode.encodeWithSpace("/"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToParenthesisOpen() {
-        assertEquals("-.--.", MorseEncode.encode('('));
+        assertEquals("-.--.", morseEncode.encodeWithSpace("("));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToParenthesisClose() {
-        assertEquals("-.--.-", MorseEncode.encode(')'));
+        assertEquals("-.--.-", morseEncode.encodeWithSpace(")"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToBraketOpen() {
-        assertEquals("-.--.", MorseEncode.encode('['));
+        assertEquals("-.--.", morseEncode.encodeWithSpace("["));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToBraketClose() {
-        assertEquals("-.--.-", MorseEncode.encode(']'));
+        assertEquals("-.--.-", morseEncode.encodeWithSpace("]"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToAmpersand() {
-        assertEquals(".-...", MorseEncode.encode('&'));
+        assertEquals(".-...", morseEncode.encodeWithSpace("&"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToColon() {
-        assertEquals("---...", MorseEncode.encode(':'));
+        assertEquals("---...", morseEncode.encodeWithSpace(":"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToSemiColon() {
-        assertEquals("-.-.-.", MorseEncode.encode(';'));
+        assertEquals("-.-.-.", morseEncode.encodeWithSpace(";"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToEqual() {
-        assertEquals("-...-", MorseEncode.encode('='));
+        assertEquals("-...-", morseEncode.encodeWithSpace("="));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToHifen() {
-        assertEquals("-....-", MorseEncode.encode('-'));
+        assertEquals("-....-", morseEncode.encodeWithSpace("-"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToUnderLine() {
-        assertEquals("..--.-", MorseEncode.encode('_'));
+        assertEquals("..--.-", morseEncode.encodeWithSpace("_"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToQuote() {
-        assertEquals(".-..-.", MorseEncode.encode('"'));
+        assertEquals(".-..-.", morseEncode.encodeWithSpace("\""));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToDollar() {
-        assertEquals("...-..-", MorseEncode.encode('$'));
+        assertEquals("...-..-", morseEncode.encodeWithSpace("$"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentToAtSign() {
-        assertEquals(".--.-.", MorseEncode.encode('@'));
+        assertEquals(".--.-.", morseEncode.encodeWithSpace("@"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentTo0() {
-        assertEquals("-----", MorseEncode.encode('0'));
+        assertEquals("-----", morseEncode.encodeWithSpace("0"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentTo1() {
-        assertEquals(".----", MorseEncode.encode('1'));
+        assertEquals(".----", morseEncode.encodeWithSpace("1"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentTo2() {
-        assertEquals("..---", MorseEncode.encode('2'));
+        assertEquals("..---", morseEncode.encodeWithSpace("2"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentTo3() {
-        assertEquals("...--", MorseEncode.encode('3'));
+        assertEquals("...--", morseEncode.encodeWithSpace("3"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentTo4() {
-        assertEquals("....-", MorseEncode.encode('4'));
+        assertEquals("....-", morseEncode.encodeWithSpace("4"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentTo5() {
-        assertEquals(".....", MorseEncode.encode('5'));
+        assertEquals(".....", morseEncode.encodeWithSpace("5"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentTo6() {
-        assertEquals("-....", MorseEncode.encode('6'));
+        assertEquals("-....", morseEncode.encodeWithSpace("6"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentTo7() {
-        assertEquals("--...", MorseEncode.encode('7'));
+        assertEquals("--...", morseEncode.encodeWithSpace("7"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentTo8() {
-        assertEquals("---..", MorseEncode.encode('8'));
+        assertEquals("---..", morseEncode.encodeWithSpace("8"));
     }
 
     @Test public void shouldReturnTheMorseCorrespondentTo9() {
-        assertEquals("----.", MorseEncode.encode('9'));
+        assertEquals("----.", morseEncode.encodeWithSpace("9"));
     }
 
     @Test public void shouldReturnTheTextCorrespondent() throws Exception {
         assertEquals(".--. .-. --- -.-. .-.. .- -- .- - .. --- -.",
-                MorseEncode.encodeWithSpace("Proclamation"));
+                morseEncode.encodeWithSpace("Proclamation"));
 
         assertEquals(". -- .- -. -.-. .. .--. .- - .. --- -.",
-                MorseEncode.encodeWithSpace("Emancipation"));
+                morseEncode.encodeWithSpace("Emancipation"));
     }
 
     @Test public void shouldReturnTheTextCorrespondentWithDoubleSpaceBetweenWords() throws Exception {
         assertEquals(". -- .- -. -.-. .. .--. .- - .. --- -.  .--. .-. --- -.-. .-.. .- -- .- - .. --- -.",
-                MorseEncode.encodeWithSpace("Emancipation Proclamation"));
+                morseEncode.encodeWithSpace("Emancipation Proclamation"));
 
         assertEquals("-... -.--  - .... .  .--. .-. . ... .. -.. . -. -  --- ..-.  ..- -. .. - . -..  ... - .- - . ...  --- ..-.  .- -- . .-. .. -.-. .-",
-                MorseEncode.encodeWithSpace("By the president of united states of america"));
+                morseEncode.encodeWithSpace("By the president of united states of america"));
     }
 
     @Test public void shouldReturnTheTextCorrespondentWithDoubleSpaceBetweenWordsWithSpecialCharacters() throws Exception {
         assertEquals(".-- .... . .-. . .- ... --..--  --- -.  - .... .  - .-- . -. - -.-- -...- ... . -.-. --- -. -..  -.. .- -.--  --- ..-.  ... . .--. - . -- -... . .-. --..--  .. -.  - .... .  -.-- . .- .-.  --- ..-.  --- ..- .-.  .-.. --- .-. -..",
-                MorseEncode.encodeWithSpace("Whereas, On the Twenty=Second day of September, in the year of our Lord"));
+                morseEncode.encodeWithSpace("Whereas, On the Twenty=Second day of September, in the year of our Lord"));
     }
 
     @Test public void shouldReturnTheTextCorrespondentWithoutSpace() throws Exception {
         assertEquals(".--..-.----.-..-...---.--..----.",
-                MorseEncode.encodeWithoutSpace("Proclamation"));
+                morseEncode.encodeWithoutSpace("Proclamation"));
 
         assertEquals(".-....-.-.-.---.-..-.",
-                MorseEncode.encodeWithoutSpace("Lincoln"));
+                morseEncode.encodeWithoutSpace("Lincoln"));
+    }
+
+    private void defineWhen(Alphabet alphabetMock, String letter, String morseLetter) {
+        when(alphabetMock.fromLetter(letter)).thenReturn(morseLetter);
+        when(alphabetMock.fromLetter(letter.toLowerCase())).thenReturn(morseLetter);
+    }
+
+    private Alphabet createMorseAlphabetMock() {
+        Alphabet alphabetMock = mock(Alphabet.class);
+        defineWhen(alphabetMock, "A", ".-");
+        defineWhen(alphabetMock, "B", "-...");
+        defineWhen(alphabetMock, "C", "-.-.");
+        defineWhen(alphabetMock, "D", "-..");
+        defineWhen(alphabetMock, "E", ".");
+        defineWhen(alphabetMock, "F", "..-.");
+        defineWhen(alphabetMock, "G", "--.");
+        defineWhen(alphabetMock, "H", "....");
+        defineWhen(alphabetMock, "I", "..");
+        defineWhen(alphabetMock, "J", ".---");
+        defineWhen(alphabetMock, "K", "-.-");
+        defineWhen(alphabetMock, "L", ".-..");
+        defineWhen(alphabetMock, "M", "--");
+        defineWhen(alphabetMock, "N", "-.");
+        defineWhen(alphabetMock, "O", "---");
+        defineWhen(alphabetMock, "P", ".--.");
+        defineWhen(alphabetMock, "Q", "--.-");
+        defineWhen(alphabetMock, "R", ".-.");
+        defineWhen(alphabetMock, "S", "...");
+        defineWhen(alphabetMock, "T", "-");
+        defineWhen(alphabetMock, "U", "..-");
+        defineWhen(alphabetMock, "V", "...-");
+        defineWhen(alphabetMock, "W", ".--");
+        defineWhen(alphabetMock, "X", "-..-");
+        defineWhen(alphabetMock, "Y", "-.--");
+        defineWhen(alphabetMock, "Z", "--..");
+
+        defineWhen(alphabetMock, " ", "");
+        defineWhen(alphabetMock, ".", ".-.-.-");
+        defineWhen(alphabetMock, ",", "--..--");
+        defineWhen(alphabetMock, "?", "..--..");
+        defineWhen(alphabetMock, "'", ".----.");
+        defineWhen(alphabetMock, "!", "-.-.--");
+        defineWhen(alphabetMock, "/", "-..-.");
+        defineWhen(alphabetMock, "(", "-.--.");
+        defineWhen(alphabetMock, ")", "-.--.-");
+        defineWhen(alphabetMock, "[", "-.--.");
+        defineWhen(alphabetMock, "]", "-.--.-");
+        defineWhen(alphabetMock, "&", ".-...");
+        defineWhen(alphabetMock, ":", "---...");
+        defineWhen(alphabetMock, ";", "-.-.-.");
+        defineWhen(alphabetMock, "=", "-...-");
+        defineWhen(alphabetMock, "-", "-....-");
+        defineWhen(alphabetMock, "_", "..--.-");
+        defineWhen(alphabetMock, "\"", ".-..-.");
+        defineWhen(alphabetMock, "$", "...-..-");
+        defineWhen(alphabetMock, "@", ".--.-.");
+
+        defineWhen(alphabetMock, "0", "-----");
+        defineWhen(alphabetMock, "1", ".----");
+        defineWhen(alphabetMock, "2", "..---");
+        defineWhen(alphabetMock, "3", "...--");
+        defineWhen(alphabetMock, "4", "....-");
+        defineWhen(alphabetMock, "5", ".....");
+        defineWhen(alphabetMock, "6", "-....");
+        defineWhen(alphabetMock, "7", "--...");
+        defineWhen(alphabetMock, "8", "---..");
+        defineWhen(alphabetMock, "9", "----.");
+
+        return alphabetMock;
     }
 }
