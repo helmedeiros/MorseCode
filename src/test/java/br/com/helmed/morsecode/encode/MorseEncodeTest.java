@@ -213,4 +213,12 @@ public class MorseEncodeTest {
     @Test public void shouldReturnTheMorseCorrespondentToQuote() {
         assertEquals(".-..-.", MorseEncode.encode('"'));
     }
+
+    @Test public void shouldReturnTheMorseCorrespondentToDollar() {
+        assertEquals("...-..-", MorseEncode.encode('$'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToAtSign() {
+        assertEquals(".--.-.", MorseEncode.encode('@'));
+    }
 }
