@@ -205,4 +205,8 @@ public class MorseEncodeTest {
     @Test public void shouldReturnTheMorseCorrespondentToHifen() {
         assertEquals("-....-", MorseEncode.encode('-'));
     }
+
+    @Test public void shouldReturnTheMorseCorrespondentToUnderLine() {
+        assertEquals("..--.-", MorseEncode.encode('_'));
+    }
 }
