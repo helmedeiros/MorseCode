@@ -221,4 +221,8 @@ public class MorseEncodeTest {
     @Test public void shouldReturnTheMorseCorrespondentToAtSign() {
         assertEquals(".--.-.", MorseEncode.encode('@'));
     }
+
+    @Test public void shouldReturnTheMorseCorrespondentTo0() {
+        assertEquals("-----", MorseEncode.encode('0'));
+    }
 }
