@@ -141,4 +141,84 @@ public class MorseEncodeTest {
         assertEquals("--..", MorseEncode.encode('Z'));
         assertEquals("--..", MorseEncode.encode('z'));
     }
+
+    @Test public void shouldReturnTheMorseCorrespondentToSpace() {
+        assertEquals("", MorseEncode.encode(' '));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToDot() {
+        assertEquals(".-.-.-", MorseEncode.encode('.'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToComa() {
+        assertEquals("--..--", MorseEncode.encode(','));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToQuestionMArk() {
+        assertEquals("..--..", MorseEncode.encode('?'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToApostrophe() {
+        assertEquals(".----.", MorseEncode.encode('\''));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToExclamationMArk() {
+        assertEquals("-.-.--", MorseEncode.encode('!'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToSlash() {
+        assertEquals("-..-.", MorseEncode.encode('/'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToParenthesisOpen() {
+        assertEquals("-.--.", MorseEncode.encode('('));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToParenthesisClose() {
+        assertEquals("-.--.-", MorseEncode.encode(')'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToBraketOpen() {
+        assertEquals("-.--.", MorseEncode.encode('['));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToBraketClose() {
+        assertEquals("-.--.-", MorseEncode.encode(']'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToAmpersand() {
+        assertEquals(".-...", MorseEncode.encode('&'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToColon() {
+        assertEquals("---...", MorseEncode.encode(':'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToSemiColon() {
+        assertEquals("-.-.-.", MorseEncode.encode(';'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToEqual() {
+        assertEquals("-...-", MorseEncode.encode('='));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToHifen() {
+        assertEquals("-....-", MorseEncode.encode('-'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToUnderLine() {
+        assertEquals("..--.-", MorseEncode.encode('_'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToQuote() {
+        assertEquals(".-..-.", MorseEncode.encode('"'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToDollar() {
+        assertEquals("...-..-", MorseEncode.encode('$'));
+    }
+
+    @Test public void shouldReturnTheMorseCorrespondentToAtSign() {
+        assertEquals(".--.-.", MorseEncode.encode('@'));
+    }
 }
