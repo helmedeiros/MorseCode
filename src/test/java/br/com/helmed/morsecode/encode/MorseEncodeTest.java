@@ -261,4 +261,12 @@ public class MorseEncodeTest {
     @Test public void shouldReturnTheMorseCorrespondentTo9() {
         assertEquals("----.", MorseEncode.encode('9'));
     }
+
+    @Test public void shouldReturnTheTextCorrespondent() throws Exception {
+        assertEquals(".--. .-. --- -.-. .-.. .- -- .- - .. --- -.",
+                MorseEncode.encodeWithSpace("Proclamation"));
+
+        assertEquals(". -- .- -. -.-. .. .--. .- - .. --- -.",
+                MorseEncode.encodeWithSpace("Emancipation"));
+    }
 }

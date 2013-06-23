@@ -78,7 +78,22 @@ public class MorseEncode {
      * @param letter - The {@link char} alpha numeric information.
      * @return The correspondent morse.
      */
-    public static String encode(char letter) {
+    public static String encode(final char letter) {
         return encodeDictionary.get(String.valueOf(letter).toUpperCase());
+    }
+
+    /**
+     * Encode the given {@link String} to the correspondent morse {@link String}.
+     * @param text - The {@link String} alpha numeric information.
+     * @return The correspondent morse.
+     */
+    public static String encodeWithSpace(final String text) {
+        StringBuilder encodedText = new StringBuilder("");
+        String cleanedText = text.replace("\n", "").replace("\t", "");
+        for (char character : cleanedText.toCharArray()) {
+            encodedText.append(encode(character)).append(" ");
+        }
+
+        return encodedText.toString().trim();
     }
 }
