@@ -189,4 +189,8 @@ public class MorseEncodeTest {
     @Test public void shouldReturnTheMorseCorrespondentToAmpersand() {
         assertEquals(".-...", MorseEncode.encode('&'));
     }
+
+    @Test public void shouldReturnTheMorseCorrespondentToColon() {
+        assertEquals("---...", MorseEncode.encode(':'));
+    }
 }
