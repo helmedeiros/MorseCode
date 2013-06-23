@@ -48,6 +48,7 @@ public class MorseEncode {
         encodeDictionary.put("/", "-..-.");
         encodeDictionary.put("(", "-.--.");
         encodeDictionary.put(")", "-.--.-");
+        encodeDictionary.put("[", "-.--.");
     }
 
     /**

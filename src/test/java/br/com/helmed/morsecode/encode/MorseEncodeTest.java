@@ -177,4 +177,8 @@ public class MorseEncodeTest {
     @Test public void shouldReturnTheMorseCorrespondentToParenthesisClose() {
         assertEquals("-.--.-", MorseEncode.encode(')'));
     }
+
+    @Test public void shouldReturnTheMorseCorrespondentToBraketOpen() {
+        assertEquals("-.--.", MorseEncode.encode('['));
+    }
 }
