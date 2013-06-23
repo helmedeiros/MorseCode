@@ -89,9 +89,28 @@ public class MorseEncode {
      */
     public static String encodeWithSpace(final String text) {
         StringBuilder encodedText = new StringBuilder("");
-        String cleanedText = text.replace("\n", "").replace("\t", "");
+        final String cleanedText = text.replace("\n", "").replace("\t", "");
         for (char character : cleanedText.toCharArray()) {
             encodedText.append(encode(character)).append(" ");
+        }
+
+        return encodedText.toString().trim();
+    }
+
+    /**
+     * Encode the given {@link String} to the correspondent morse {@link String}.
+     * @param text - The {@link String} alpha numeric information.
+     * @return The correspondent morse.
+     */
+    public static String encodeWithoutSpace(final String text) {
+        StringBuilder encodedText = new StringBuilder("");
+
+        final String cleanedText = text.replace("\n", "").replace("\t", "");
+
+        for (char character : cleanedText.toCharArray()) {
+            String encode = encode(character);
+            if(encode != null) encodedText.append(encode);
+            else System.out.println("Null -> "+character);
         }
 
         return encodedText.toString().trim();

@@ -281,6 +281,14 @@ public class MorseEncodeTest {
     @Test public void shouldReturnTheTextCorrespondentWithDoubleSpaceBetweenWordsWithSpecialCharacters() throws Exception {
         assertEquals(".-- .... . .-. . .- ... --..--  --- -.  - .... .  - .-- . -. - -.-- -...- ... . -.-. --- -. -..  -.. .- -.--  --- ..-.  ... . .--. - . -- -... . .-. --..--  .. -.  - .... .  -.-- . .- .-.  --- ..-.  --- ..- .-.  .-.. --- .-. -..",
                 MorseEncode.encodeWithSpace("Whereas, On the Twenty=Second day of September, in the year of our Lord"));
-
     }
+
+    @Test public void shouldReturnTheTextCorrespondentWithoutSpace() throws Exception {
+        assertEquals(".--..-.----.-..-...---.--..----.",
+                MorseEncode.encodeWithoutSpace("Proclamation"));
+
+        assertEquals(".-....-.-.-.---.-..-.",
+                MorseEncode.encodeWithoutSpace("Lincoln"));
+    }
+
 }
