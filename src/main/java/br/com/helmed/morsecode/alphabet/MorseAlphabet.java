@@ -101,4 +101,15 @@ public class MorseAlphabet implements Alphabet {
     public String fromLetter(String letter) {
         return morseAlphabetMap.get(letter.toUpperCase());
     }
+
+    @Override
+    public String toLetter(String morse) {
+        String letter = "";
+        for (Map.Entry<String, String> cod : morseAlphabetMap.entrySet()) {
+            if (cod.getValue().equals(morse)){
+                letter = cod.getKey();
+            }
+        }
+        return letter;
+    }
 }

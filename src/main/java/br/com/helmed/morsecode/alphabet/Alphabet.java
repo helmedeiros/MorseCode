@@ -7,4 +7,6 @@ package br.com.helmed.morsecode.alphabet;
  */
 public interface Alphabet {
     String fromLetter(String letter);
+
+    String toLetter(String morse);
 }
