@@ -366,4 +366,45 @@ public class MorseAlphabetTest {
     @Test public void shouldReturnWWhenPassedCorrespondentToW() throws Exception {
         assertEquals("W", morseAlphabet.toLetter(".--"));
     }
+
+    @Test public void shouldReturn0WhenCorrespondentTo0() throws Exception {
+        assertEquals("0", morseAlphabet.toLetter("-----"));
+    }
+
+    @Test public void shouldReturn1WhenCorrespondentTo1() throws Exception {
+        assertEquals("1", morseAlphabet.toLetter(".----"));
+    }
+
+    @Test public void shouldReturn2WhenCorrespondentTo2() throws Exception {
+        assertEquals("2", morseAlphabet.toLetter("..---"));
+    }
+
+    @Test public void shouldReturn3WhenCorrespondentTo3() throws Exception {
+        assertEquals("3", morseAlphabet.toLetter("...--"));
+    }
+
+    @Test public void shouldReturn4WhenCorrespondentTo4() throws Exception {
+        assertEquals("4", morseAlphabet.toLetter("....-"));
+    }
+
+    @Test public void shouldReturn5WhenCorrespondentTo5() throws Exception {
+        assertEquals("5", morseAlphabet.toLetter("....."));
+    }
+
+    @Test public void shouldReturn6WhenCorrespondentTo6() throws Exception {
+        assertEquals("6", morseAlphabet.toLetter("-...."));
+    }
+
+    @Test public void shouldReturn7WhenCorrespondentTo7() throws Exception {
+        assertEquals("7", morseAlphabet.toLetter("--..."));
+    }
+
+    @Test public void shouldReturn8WhenCorrespondentTo8() throws Exception {
+        assertEquals("8", morseAlphabet.toLetter("---.."));
+    }
+
+    @Test public void shouldReturn9WhenCorrespondentTo9() throws Exception {
+        assertEquals("9", morseAlphabet.toLetter("----."));
+    }
+
 }
