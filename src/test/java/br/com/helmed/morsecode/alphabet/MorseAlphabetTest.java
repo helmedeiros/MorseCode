@@ -407,4 +407,7 @@ public class MorseAlphabetTest {
         assertEquals("9", morseAlphabet.toLetter("----."));
     }
 
+    @Test public void shouldReturnDotWhenCorrespondentToDot() throws Exception {
+        assertEquals(".", morseAlphabet.toLetter(".-.-.-"));
+    }
 }
