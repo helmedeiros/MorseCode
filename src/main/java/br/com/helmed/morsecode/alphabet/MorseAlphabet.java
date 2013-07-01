@@ -102,6 +102,11 @@ public class MorseAlphabet implements Alphabet {
         return morseAlphabetMap.get(letter.toUpperCase());
     }
 
+    /**
+     * Search and return the correspondent {@link String} letter of the given morse.
+     * @param morse - The {@link String} morse from who is needed the correspondent letter.
+     * @return the correspondent {@link String} letter of the given morse.
+     */
     @Override
     public String toLetter(String morse) {
         String letter = "";
