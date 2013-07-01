@@ -282,4 +282,8 @@ public class MorseAlphabetTest {
     @Test public void shouldReturnEWhenPassedCorrespondentMorseToE() throws Exception {
         assertEquals("E", morseAlphabet.toLetter("."));
     }
+
+    @Test public void shouldReturnFWhenPassedCorrespondentMorseToF() throws Exception {
+        assertEquals("F", morseAlphabet.toLetter("..-."));
+    }
 }
