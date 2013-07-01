@@ -410,4 +410,68 @@ public class MorseAlphabetTest {
     @Test public void shouldReturnDotWhenCorrespondentToDot() throws Exception {
         assertEquals(".", morseAlphabet.toLetter(".-.-.-"));
     }
+
+    @Test public void shouldReturnComaWhenMorseCorrespondentToComa() {
+        assertEquals(",", morseAlphabet.toLetter("--..--"));
+    }
+
+    @Test public void shouldReturnQuestionMarkWhenMorseCorrespondentToQuestionMArk() {
+        assertEquals("?", morseAlphabet.toLetter("..--.."));
+    }
+
+    @Test public void shouldReturnApostropheWhenMorseCorrespondentToApostrophe() {
+        assertEquals("\'", morseAlphabet.toLetter(".----."));
+    }
+
+    @Test public void shouldReturnExclamationWhenMorseCorrespondentToExclamationMArk() {
+        assertEquals("!", morseAlphabet.toLetter("-.-.--"));
+    }
+
+    @Test public void shouldReturnSlashMorseCorrespondentToSlash() {
+        assertEquals("/", morseAlphabet.toLetter("-..-."));
+    }
+
+    @Test public void shouldReturnParenthesisOpenMorseCorrespondentToParenthesisOpen() {
+        assertEquals("(", morseAlphabet.toLetter("-.--."));
+    }
+
+    @Test public void shouldReturnParenthesisCloseMorseCorrespondentToParenthesisClose() {
+        assertEquals(")", morseAlphabet.toLetter("-.--.-"));
+    }
+
+    @Test public void shouldReturnWhenMorseCorrespondentToAmpersand() {
+        assertEquals("&", morseAlphabet.toLetter(".-..."));
+    }
+
+    @Test public void shouldReturnWhenMorseCorrespondentToColon() {
+        assertEquals(":", morseAlphabet.toLetter("---..."));
+    }
+
+    @Test public void shouldReturnWhenMorseCorrespondentToSemiColon() {
+        assertEquals(";", morseAlphabet.toLetter("-.-.-."));
+    }
+
+    @Test public void shouldReturnWhenMorseCorrespondentToEqual() {
+        assertEquals("=", morseAlphabet.toLetter("-...-"));
+    }
+
+    @Test public void shouldReturnWhenMorseCorrespondentToHifen() {
+        assertEquals("-", morseAlphabet.toLetter("-....-"));
+    }
+
+    @Test public void shouldReturnWhenMorseCorrespondentToUnderLine() {
+        assertEquals("_", morseAlphabet.toLetter("..--.-"));
+    }
+
+    @Test public void shouldReturnWhenMorseCorrespondentToQuote() {
+        assertEquals("\"", morseAlphabet.toLetter(".-..-."));
+    }
+
+    @Test public void shouldReturnWhenMorseCorrespondentToDollar() {
+        assertEquals("$", morseAlphabet.toLetter("...-..-"));
+    }
+
+    @Test public void shouldReturnWhenMorseCorrespondentToAtSign() {
+        assertEquals("@", morseAlphabet.toLetter(".--.-."));
+    }
 }
