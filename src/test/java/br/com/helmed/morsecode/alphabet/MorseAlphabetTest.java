@@ -315,9 +315,11 @@ public class MorseAlphabetTest {
        assertEquals("M", morseAlphabet.toLetter("--"));
     }
 
-    @Test
-    public void shouldReturnNWhenPassedCorrespondentToN() throws Exception {
+    @Test public void shouldReturnNWhenPassedCorrespondentToN() throws Exception {
         assertEquals("N", morseAlphabet.toLetter("-."));
+    }
 
+    @Test public void shouldReturnOWhenPassedCorrespondentToO() throws Exception {
+        assertEquals("O", morseAlphabet.toLetter("---"));
     }
 }
